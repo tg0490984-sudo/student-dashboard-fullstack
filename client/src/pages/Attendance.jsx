@@ -4,7 +4,7 @@ function Attendance() {
   const [present, setPresent] = useState(false);
 
 useEffect(() => {
-  fetch("http://localhost:5000/api/attendance")
+  fetch("https://student-dashboard-backend-y91d.onrender.com/api/attendance")
     .then((res) => res.json())
     .then((data) => setPresent(data.present))
     .catch((err) => console.error(err));
@@ -37,7 +37,7 @@ useEffect(() => {
 
       <button
         onClick={() => {
-          fetch("http://localhost:5000/api/attendance", {
+          fetch("https://student-dashboard-backend-y91d.onrender.com/api/attendance", {
             method: "PUT",
           })
             .then((res) => res.json())

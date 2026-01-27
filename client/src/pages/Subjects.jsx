@@ -9,7 +9,7 @@ function Subjects() {
 
   // Persist subjects to localStorage
   useEffect(() => {
-  fetch("http://localhost:5000/api/subjects")
+  fetch("https://student-dashboard-backend-y91d.onrender.com/api/subjects")
     .then((res) => res.json())
     .then((data) => setSubjects(data))
     .catch((err) => console.error(err));
@@ -20,7 +20,7 @@ function Subjects() {
   const handleAddSubject = () => {
     if (newSubject.trim() === "") return;
 
-    fetch("http://localhost:5000/api/subjects", {
+    fetch("https://student-dashboard-backend-y91d.onrender.com/api/subjects", {
       method: "POST",
       headers: {
        "Content-Type": "application/json",
@@ -40,7 +40,7 @@ function Subjects() {
 
   // Delete a subject
   const handleDeleteSubject = (indexToDelete) => {
-  fetch(`http://localhost:5000/api/subjects/${indexToDelete}`, {
+  fetch(`https://student-dashboard-backend-y91d.onrender.com/api/subjects/${indexToDelete}`, {
     method: "DELETE",
   })
     .then((res) => res.json())

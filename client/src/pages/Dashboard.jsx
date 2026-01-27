@@ -10,12 +10,12 @@ function Dashboard() {
 
   useEffect(() => {
     // Fetch subjects
-    fetch("http://localhost:5000/api/subjects")
+    fetch("https://student-dashboard-backend-y91d.onrender.com/api/subjects")
      .then(res => res.json())
       .then(data => setSubjectsCount(data.length));
 
     // Fetch assignments
-    fetch("http://localhost:5000/api/assignments")
+    fetch("https://student-dashboard-backend-y91d.onrender.com/api/assignments")
       .then(res => res.json())
       .then(data => {
         setAssignmentsCount(data.length);
@@ -29,7 +29,7 @@ function Dashboard() {
 
 
     // Fetch attendance
-    fetch("http://localhost:5000/api/attendance")
+    fetch("https://student-dashboard-backend-y91d.onrender.com/api/attendance")
       .then(res => res.json())
       .then(data => setAttendance(data.present));
   }, []);

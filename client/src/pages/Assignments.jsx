@@ -7,7 +7,7 @@ function Assignments() {
   const [newAssignment, setNewAssignment] = useState("");
 
   const toggleStatus = (indexToToggle) => {
-    fetch(`http://localhost:5000/api/assignments/${indexToToggle}`, {
+    fetch(`https://student-dashboard-backend-y91d.onrender.comcd client/api/assignments/${indexToToggle}`, {
       method: "PUT",
     })
       .then((res) => res.json())
@@ -21,7 +21,7 @@ function Assignments() {
   const handleAddAssignment = () => {
     if (newAssignment.trim() === "") return;
 
-   fetch("http://localhost:5000/api/assignments", {
+   fetch("https://student-dashboard-backend-y91d.onrender.com/api/assignments", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -40,7 +40,7 @@ function Assignments() {
 
   
   const handleDeleteAssignment = (indexToDelete) => {
-    fetch(`http://localhost:5000/api/assignments/${indexToDelete}`, {
+    fetch(`https://student-dashboard-backend-y91d.onrender.com/api/assignments/${indexToDelete}`, {
      method: "DELETE",
     })
      .then((res) => res.json())
@@ -58,7 +58,7 @@ function Assignments() {
   }, [assignments]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/assignments")
+    fetch("https://student-dashboard-backend-y91d.onrender.com/api/assignments")
       .then((res) => res.json())
       .then((data) => setAssignments(data))
       .catch((err) => console.error(err));
