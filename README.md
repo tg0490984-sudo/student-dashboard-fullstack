@@ -1,3 +1,4 @@
+
 # 🎓 Student Dashboard (Full Stack)
 
 A full-stack student dashboard web application built to manage subjects, assignments, and attendance in a clean and intuitive interface.
@@ -75,3 +76,7 @@ studentdashboard/
  ├── client/   # React frontend
  ├── server/   # Node + Express backend
  └── README.md
+=======
+# student-dashboard-fullstack
+Full Stack Student Dashboard with assignment tracking and subject management
+
